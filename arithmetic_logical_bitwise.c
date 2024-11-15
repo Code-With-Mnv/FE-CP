@@ -3,7 +3,10 @@
 int main()
 {
     // Arithmetic Operators
-    float a = 10, b = 30;
+
+    float a = 10, b = 30, c = 40, d = 50;
+
+    printf("\nArithmetic operators:\n");
 
     printf("A = %f, B = %f", a, b);
 
@@ -13,18 +16,23 @@ int main()
     printf("Quotient: %.1f\n", a / b);
 
     // Logical Operators
-    int x = 10, y = 20;
 
-    printf("\nx = %d, y = %d", x, y);
-
-    printf("\nx AND y: %d\n", x && y);
-    printf("x OR y: %d\n", x || y);
-    printf("NOT x: %d\n", !x);
+    printf("\nLogical operators:\n");
+    printf("(a > b) && (c > d): %d\n", (a > b) && (c > d));
+    printf("(a > b) || (c > d): %d\n", (a > b) || (c > d));
+    printf("!(a > b): %d\n", !(a > b));
 
     // Bitwise Operators
+
+    printf("\nBitwise operators:\n");
+
+    int x = 0, y = 1;
+
+    printf("x = %d\n", x);
+    printf("y = %d\n", y);
     printf("\nx BITWISE AND y: %d\n", x & y);
     printf("x BITWISE OR y: %d\n", x | y);
-    printf("x BITWISE XOR y: %d\n", x ^ y);
+    printf("x BITWISE xOR y: %d\n", x ^ y);
 
     return 0;
 }
