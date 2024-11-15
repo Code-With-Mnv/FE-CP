@@ -19,4 +19,4 @@ int main() {
     return 0;
 }
 
-// This code was contributed by Omkar Prabhune
+// This code was contributed by MANAV
