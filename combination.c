@@ -1,37 +1,22 @@
 #include <stdio.h>
 
-int combination(int n, int r)
-{
-    float n_fact = 1, r_fact = 1, n_r_fact = 1, combination = 0;
-    for (int i = 1; i <= n; i++)
-    {
-        n_fact *= i;
-    }
-
-    for (int i = 1; i <= r; i++)
-    {
-        r_fact *= i;
-    }
-
-    for (int i = 1; i <= n - r; i++)
-    {
-        n_r_fact *= i;
-    }
-
-    combination = (n_fact) / (n_r_fact * n_fact);
-
-    return combination;
+long factorial(int n) {
+      if(n == 0  || n==1)
+      return 1;
+    long factorial = 1;
+    for (int i = 2; i <= n; i++)
+        factorial = factorial * i;
+    return factorial;
 }
 
-int main()
-{
-    int n, r;
+long nCr(int n, int r) {
+    return factorial(n) / (factorial(r) * factorial(n - r));
+}
 
-    printf("Enter the values for n and r:");
-    scanf("%d %d", &n, &r);
-
-    int result = combination(n, r);
-    printf("The combination of %d taken %d at a time is: %d\n", n, r, result);
-
+int main() {
+    int n = 5, r = 3;
+      printf("%d", nCr(n, r));
     return 0;
 }
+
+// This code was contributed by Omkar Prabhune
